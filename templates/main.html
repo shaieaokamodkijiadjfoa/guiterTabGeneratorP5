@@ -1,0 +1,16 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} guiterTabGenerator {% endblock title %}
+{% block content %}
+<div class="container">
+  <div id="canvasHolder" align="center">
+  </div>
+</div>
+{% endblock content %}
+{% block head %}
+{{ super() }}
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script> -->
+<script src={{ url_for('send_static', path='p5.min.js') }}></script>
+<script src={{ url_for('send_static', path='p5.dom.min.js') }}></script>
+<script src={{ url_for('send_static', path='sketch.js') }}></script>
+{% endblock head %}
